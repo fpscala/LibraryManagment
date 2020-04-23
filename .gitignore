@@ -1,0 +1,17 @@
+logs/application.log
+project
+project/target/
+target/
+public/upload-files
+tmp
+.history
+dist
+/.idea
+/*.iml
+/out
+/.idea_modules
+/.classpath
+/.project
+/RUNNING_PID
+/.settings
+application_local.conf

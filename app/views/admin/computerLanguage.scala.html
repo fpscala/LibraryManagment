@@ -1,0 +1,70 @@
+@()
+<div class="row" data-bind="visible: vm.page() == 'computerLanguages'">
+    <div class="col-md-12 ">
+        <div class="panel-header box-shadow">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addLanguage">
+                <i class="fas fa-laptop"> Add New Computer Language</i>
+            </button>
+        </div>
+    </div>
+    <div class="col-md-12 ">
+        <div class="box-shadow">
+            <div class="panel-header mt-5">
+                <h3>Computer Languages</h3>
+            </div>
+            <table class="table table-bordered bg-white table-hover table-striped" >
+                <thead class="bg-darker-blue">
+                    <tr>
+                        <th>№</th>
+                        <th>Name</th>
+                        <th>Logo</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: vm.languageList">
+                    <tr>
+                        <td data-bind="text: $data.id">1</td>
+                        <td data-bind="text: $data.name">Scala</td>
+                        <td><img data-bind="attr: {src: $data.logoName}" class="img-lang" alt=""></td>
+                        <td>
+                            <a class="addLanguage mr-3" title="Add" data-toggle="tooltip"><i class="fas fa-edit"></i></a>
+                            <a class="mr-3 editLanguage" title="Edit" data-toggle="tooltip" ><i class="fas fa-pen-alt"></i></a>
+                            <a class="deleteLanguage" title="Delete" data-toggle="tooltip"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addLanguage" tabindex="-1" role="dialog" aria-labelledby="addLanguageTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form id="logo-upload-form" class="m-4" action="@controllers.routes.AdminController.createLanguage()"
+                enctype="multipart/form-data" method="post">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Language</h5>
+                        <button type="button" class="close" id="closeModalLanguage" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body m-4">
+                        <div class="form-group">
+                            <label for="nameLanguage" >Name: </label>
+                            <input class="form-control" type="text" id="nameLanguage" name="languageName" data-bind="value: vm.language.name">
+                        </div>
+                        <div class="form-group">
+                            <span class="btn btn-file btn-attach-image futura">
+                                Attach logo<input type="file" name="attachedLogo"/>
+                            </span>
+                            <span id="logo-name"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" data-bind="click: vm.addLanguage, enable: vm.enableSubmitButton" class="btn btn-success ">
+                            Add Language</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
