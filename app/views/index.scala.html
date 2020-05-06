@@ -2,290 +2,214 @@
 @()
 @import views.html.main
 @main("Home Page", webJarsUtil) {
-  <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/index/index.css")">
-
-  <nav class="navbar navbar-expand-sm navbar-light py-3">
-        <div class="container mx-5">
-          <a href="index.scala.html" class="navbar-brand"><strong>Scala Coders Team</strong></a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a href="index.scala.html" class="nav-link active">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">PAGES</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">BLOG</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">GALLERY</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">TEAM</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">SERVICES</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">CONTACT</a>
-              </li>
-            </ul>
-          </div>
-          <i class="fas fa-search ml-3" style="border-left: 2px #777 solid; padding-left: 10px;"></i>
-        </div>
-      </nav>
-      <div class="content text-white text-center">
-        <div class="container">
-          <h1>Welcome to Scala Coders Team Project</h1>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Aliquid impedit similique nisi ab amet minima corrupti earum
-            assumenda veniam sequi cumque, blanditiis dolorem beatae magnam.
-          </p>
-          <button class="btn btn1">Details</button>
-        </div>
+  <script>
+    $(window).load(function() {
+      $(function() {
+        $('#foo2').carouFredSel({
+          auto: false,
+          responsive: true,
+          width: '100%',
+          prev: '#prev2',
+          next: '#next2',
+          scroll: 1,
+          items: {
+            height: 'auto',
+            width:320,
+            visible: {
+              min: 1,
+              max: 1
+            }
+          },
+          mousewheel: true,
+          swipe: {
+            onMouse: true,
+            onTouch: true
+          }
+        });
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+      jQuery('.camera_wrap').camera();
+    });
+  </script>
+  <div class="main">
+    <article class="slider">
+      <div class="camera_wrap">
+        <div data-src="@routes.Assets.versioned("img/picture1.jpg")"><div class="camera-caption fadeIn"></div></div>
+        <div data-src="@routes.Assets.versioned("img/picture2.jpg")"><div class="camera-caption fadeIn"></div></div>
+        <div data-src="@routes.Assets.versioned("img/picture3.jpg")"><div class="camera-caption fadeIn"></div></div>
       </div>
-      <div class="frame text-center">
+    </article>
+  </div>
+  <div class="global">
+    <section class="welcomeBox">
+      <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <i class="fas fa-gavel fa-3x"></i>
-            <h3>Get Legal Advice</h3>
-          </div>
-          <div class="col-md-3 line">
-            <i class="fas fa-user fa-3x"></i>
-            <h3>Expert Lawyer</h3>
-          </div>
-          <div class="col-md-3 line">
-            <i class="fab fa-btc fa-3x"></i>
-            <h3>Low Cost</h3>
-          </div>
-          <div class="col-md-3 line">
-            <i class="fas fa-paste fa-3x"></i>
-            <h3>Case Study</h3>
-
-          </div>
+          <article class="col-lg-12 col-md-12 col-sm-12">
+            <h2>Plunge into the wonderful<br>world of reading</h2>
+          </article>
         </div>
       </div>
-      <div class="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 py-5">
-              <h2>About Us</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas laborum beatae numquam autem optio dolore mollitia accusantium blanditiis,
-                obcaecati modi itaque natus qui odio deleniti animi earum nisi sint esse
-                quidem molestias praesentium temporibus repudiandae.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas laborum beatae numquam autem optio dolore mollitia accusantium blanditiis,
-                obcaecati modi itaque natus qui odio deleniti animi earum nisi sint esse
-                quidem molestias praesentium temporibus repudiandae.
-              </p>
+    </section>
+    <section class="popularBox">
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-12 col-md-12 col-sm-12 banner-box">
+            <h3>MOST POPULAR</h3>
+            <div class="row">
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic1.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">The Road</a>
+                      <p class="title">by Cormac McCarthy</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic2.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">Interpreter of Maladie</a>
+                      <p class="title">by Jhumpa Lahiri</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic3.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">Middlesex: A Novel</a>
+                      <p class="title">by Jeffrey Eugenides</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic4.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">Gilead: A Novel</a>
+                      <p class="title">by Marilynne Robinson</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic5.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">kavalier & clay</a>
+                      <p class="title">by michael chabon</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic6.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">A canticle for leibowitz</a>
+                      <p class="title">by walter m. miller jr.</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic7.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">The Corrections</a>
+                      <p class="title">by jonathan franzen</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <div class="thumb-pad2 maxheight1">
+                  <div class="thumbnail">
+                    <figure><a href="#"><img src="@routes.Assets.versioned("img/page1_pic8.jpg")" alt=""></a></figure>
+                    <div class="caption">
+                      <a href="#">tree of smoke: A Novel</a>
+                      <p class="title">by denis johnson</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
-            <div class="col-md-6 image">
-
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-
-      <div class="container-fluid">
-        <h3 class="text-center"><strong>Top Performers</strong></h3>
-        <div class="row content1">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person1.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
+    </section>
+    <section class="circleIconBox">
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-3 col-md-6 col-sm-6">
+            <div class="thumb-pad1 maxheight">
+              <div class="thumbnail">
+                <h2>Ask a Librarian</h2>
+                <div class="badge"><span class="fa fa-comment"></span></div>
+                <div class="caption">
+                  <p class="title">Mes cuml dia sed ineniet inger lot aliiqs dolore.</p>
+                  <p>Mes cuml dia sed in lacus ut eniascet inger aliiqt es site amet eismod ictor ut ligulate ameti dapibus ticdu nt mtsen dolor.</p>
+                  <a href="#" class="btn-default btn1">read more</a>
                 </div>
               </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person2.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
+          </article>
+          <article class="col-lg-3 col-md-6 col-sm-6">
+            <div class="thumb-pad1 maxheight">
+              <div class="thumbnail">
+                <h2>Innovations</h2>
+                <div class="badge"><span class="fa fa-lightbulb-o"></span></div>
+                <div class="caption">
+                  <p class="title">Mes cuml dia sed ineniet inger lot aliiqs dolore.</p>
+                  <p>Mes cuml dia sed in lacus ut eniascet inger aliiqt es site amet eismod ictor ut ligulate ameti dapibus ticdu nt mtsen dolor.</p>
+                  <a href="#" class="btn-default btn1">read more</a>
                 </div>
               </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person3.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
+          </article>
+          <article class="col-lg-3 col-md-6 col-sm-6">
+            <div class="thumb-pad1 maxheight">
+              <div class="thumbnail">
+                <h2>Join the Library</h2>
+                <div class="badge"><span class="fa fa-pencil-square-o"></span></div>
+                <div class="caption">
+                  <p class="title">Mes cuml dia sed ineniet inger lot aliiqs dolore.</p>
+                  <p>Mes cuml dia sed in lacus ut eniascet inger aliiqt es site amet eismod ictor ut ligulate ameti dapibus ticdu nt mtsen dolor.</p>
+                  <a href="#" class="btn-default btn1">read more</a>
                 </div>
               </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="row content1">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person4.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
+          </article>
+          <article class="col-lg-3 col-md-6 col-sm-6">
+            <div class="thumb-pad1 maxheight">
+              <div class="thumbnail">
+                <h2>Help</h2>
+                <div class="badge"><span class="fa fa-search"></span></div>
+                <div class="caption">
+                  <p class="title">Mes cuml dia sed ineniet inger lot aliiqs dolore.</p>
+                  <p>Mes cuml dia sed in lacus ut eniascet inger aliiqt es site amet eismod ictor ut ligulate ameti dapibus ticdu nt mtsen dolor.</p>
+                  <a href="#" class="btn-default btn1">read more</a>
                 </div>
               </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person2.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person1.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row content1">
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person2.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row ">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person3.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-4 text-center">
-                <img src="@routes.Assets.versioned("images/person4.jpg")" alt="" class="rounded-circle img-fluid" style="max-width: 150px;">
-                <div class="status">
-                  <i class="fas fa-comment fa-3x"></i>
-                  <span class="degree"><strong>83%</strong></span>
-                </div>
-              </div>
-              <div class="col-md-8">
-                <h5>Johndon Bonsen [bestsoft] <button class="btn btn-dark btn-sm">PROFI</button></h5>
-                <p class="expertness"><strong>iOS</strong></p>
-                <p>
-                  Lorem ipsum dolor sit amet.<br>
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                  Lorem ipsum dolor sit.
-                </p>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
-      <footer class="footer">
-        <p>Scala Coders Team &copy 2020 All Right Reserved</p>
-      </footer>
+    </section>
+  </div>
 
 }
