@@ -4,7 +4,7 @@ docker pull postgres:11
 
 docker build -t librarymanagment ./deploy/
 
-docker run --name library-db -p 1111:5432 -e 'POSTGRES_PASSWORD=maftunbek1998' -e 'POSTGRES_USER=prince' -d postgres:11
+docker run --name library-db -p 5432:5432 -e 'POSTGRES_PASSWORD=maftunbek1998' -e 'POSTGRES_USER=prince' -d postgres:11
 
 sleep 2s
 
