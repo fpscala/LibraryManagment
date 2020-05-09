@@ -10,6 +10,6 @@ sleep 3s
 
 docker exec -it library-db psql -U prince -c "create database librarymanagment"
 
-cat /conf/database/db.sql | docker exec -i library-db psql -U prince -d librarymanagment
+cat ./conf/database/db.sql | docker exec -i library-db psql -U prince -d librarymanagment
 
 source deploy.sh
