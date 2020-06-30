@@ -14,7 +14,7 @@ resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
 
 resolvers += "Akka Snapshot Repository" at "https://repo.akka.io/snapshots/"
 
-scalaVersion := "2.12.2"
+scalaVersion := "2.12.8"
 
 val akkaLibs = Seq(
   "com.typesafe.akka" %% "akka-contrib" % akkaV,
